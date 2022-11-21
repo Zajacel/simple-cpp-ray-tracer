@@ -22,26 +22,32 @@
     <Filter Include="Pliki nagłówkowe\objects">
       <UniqueIdentifier>{f130457e-c0f1-473b-ab56-51150746d784}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\macros">
+      <UniqueIdentifier>{be08dec5-29c6-4fc2-a57d-b40aba5d9912}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple CPP Ray Tracer.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="vector\vector3.cpp">
+    <ClCompile Include="vector\Vector3.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="color\color.cpp">
+    <ClCompile Include="color\Color.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="exporter\ppm.cpp">
       <Filter>Pliki źródłowe\export</Filter>
     </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vector\vector3.hpp">
+    <ClInclude Include="vector\Vector3.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="color\color.hpp">
+    <ClInclude Include="color\Color.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="exporter\ppm.hpp">
@@ -59,11 +65,17 @@
     <ClInclude Include="GeometricObject.hpp">
       <Filter>Pliki nagłówkowe\objects</Filter>
     </ClInclude>
-    <ClInclude Include="types.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="Sphere.hpp">
       <Filter>Pliki nagłówkowe\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="types.hpp">
+      <Filter>Pliki nagłówkowe\macros</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.hpp">
+      <Filter>Pliki nagłówkowe\macros</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

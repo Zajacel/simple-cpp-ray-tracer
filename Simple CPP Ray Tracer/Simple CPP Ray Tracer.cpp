@@ -1,10 +1,8 @@
 ﻿#include <iostream>
 
 #include "types.hpp"
+#include "defines.hpp"
 #include "exporter/ppm.hpp"
-
-#define WIDTH 4;
-#define HEIGHT 4;
 
 int main()
 {

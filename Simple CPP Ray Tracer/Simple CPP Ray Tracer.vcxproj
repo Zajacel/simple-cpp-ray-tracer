@@ -127,21 +127,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="color\color.cpp" />
+    <ClCompile Include="color\Color.cpp" />
     <ClCompile Include="exporter\ppm.cpp" />
+    <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Simple CPP Ray Tracer.cpp" />
-    <ClCompile Include="vector\vector3.cpp" />
+    <ClCompile Include="vector\Vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.hpp" />
-    <ClInclude Include="color\color.hpp" />
+    <ClInclude Include="color\Color.hpp" />
+    <ClInclude Include="defines.hpp" />
     <ClInclude Include="exporter\ppm.hpp" />
     <ClInclude Include="GeometricObject.hpp" />
     <ClInclude Include="Object.hpp" />
     <ClInclude Include="OrthographicCamera.hpp" />
+    <ClInclude Include="Ray.hpp" />
     <ClInclude Include="Sphere.hpp" />
     <ClInclude Include="types.hpp" />
-    <ClInclude Include="vector\vector3.hpp" />
+    <ClInclude Include="vector\Vector3.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

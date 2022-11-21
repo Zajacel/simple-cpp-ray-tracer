@@ -34,6 +34,15 @@ v3 v3mul(v3 a, double b)
 	);
 }
 
+v3 v3div(v3 a, double b)
+{
+	return v3(
+		a.X / b,
+		a.Y / b,
+		a.Z / b
+	);
+}
+
 v3 v3cross(v3 a, v3 b)
 {
 	return v3(
@@ -51,6 +60,11 @@ double v3dot(v3 a, v3 b)
 double v3len(v3 a)
 {
 	return sqrt(a.X * a.X + a.Y * a.Y + a.Z * a.Z);
+}
+
+v3 v3norm(v3 a)
+{
+	return v3div(a, v3len(a));
 }
 
 Vector3::Vector3(double x, double y, double z)

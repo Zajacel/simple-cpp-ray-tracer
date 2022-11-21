@@ -14,7 +14,11 @@ v3 v3sub(v3 a, v3 b);
 
 v3 v3mul(v3 a, double b);
 
+v3 v3div(v3 a, double b);
+
 v3 v3cross(v3 a, v3 b);
 double v3dot(v3 a, v3 b);
 
 double v3len(v3 a);
+
+v3 v3norm(v3 a);
