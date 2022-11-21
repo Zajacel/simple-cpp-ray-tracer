@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GeometricObject.hpp"
-#include "color/color.hpp"
+#include "RGB.hpp"
 
 struct Spgere : GeometricObject {
 	double radius;

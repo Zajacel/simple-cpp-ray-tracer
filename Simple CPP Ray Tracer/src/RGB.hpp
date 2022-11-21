@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../types.hpp"
+#include "types.hpp"
 
 struct RGB {
 	byte R = 0, G = 0, B = 0;

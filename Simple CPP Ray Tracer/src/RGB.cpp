@@ -1,4 +1,4 @@
-#include "color.hpp"
+#include "RGB.hpp"
 
 RGB::RGB(byte r, byte g, byte b)
 {

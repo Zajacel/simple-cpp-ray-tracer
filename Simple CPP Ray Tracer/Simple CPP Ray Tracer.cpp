@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
-#include "types.hpp"
-#include "defines.hpp"
-#include "exporter/ppm.hpp"
+#include "src/types.hpp"
+#include "src/defines.hpp"
+#include "src/ppm.hpp"
 
 int main()
 {

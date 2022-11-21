@@ -1,6 +1,6 @@
 #pragma once
 
-#include "vector/vector3.hpp"
+#include "Vector3.hpp"
 
 struct Object {
 	Vector3 pos;

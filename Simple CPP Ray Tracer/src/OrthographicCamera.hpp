@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Camera.hpp"
-#include "vector/vector3.hpp"
-#include "color/color.hpp"
+#include "Vector3.hpp"
+#include "RGB.hpp"
 
 struct OrthographicCamera : Camera {
 	Vector3 size;
