@@ -1,9 +1,7 @@
 #pragma once
 
-#include "Object.hpp"
+#include "RotateableObject.hpp"
 
-struct GeometricObject : Object {
-	Vector3 rot;
-
+struct GeometricObject : RotateableObject {
 	bool HitTest(Vector3 origin, Vector3 direction);
 };
