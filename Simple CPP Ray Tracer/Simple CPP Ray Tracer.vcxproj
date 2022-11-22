@@ -127,24 +127,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\orthographicCamera.cpp" />
     <ClCompile Include="src\RGB.cpp" />
     <ClCompile Include="src\ppm.cpp" />
     <ClCompile Include="src\Ray.cpp" />
     <ClCompile Include="Simple CPP Ray Tracer.cpp" />
+    <ClCompile Include="src\Size.cpp" />
     <ClCompile Include="src\Vector3.cpp" />
+    <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Camera.hpp" />
+    <ClInclude Include="src\RotateableObject.hpp" />
+    <ClInclude Include="src\Scene.hpp" />
+    <ClInclude Include="src\Size.hpp" />
+    <ClInclude Include="src\CameraInfo.hpp" />
     <ClInclude Include="src\RGB.hpp" />
     <ClInclude Include="src\defines.hpp" />
     <ClInclude Include="src\ppm.hpp" />
     <ClInclude Include="src\GeometricObject.hpp" />
     <ClInclude Include="src\Object.hpp" />
-    <ClInclude Include="src\OrthographicCamera.hpp" />
     <ClInclude Include="src\Ray.hpp" />
     <ClInclude Include="src\Sphere.hpp" />
     <ClInclude Include="src\types.hpp" />
     <ClInclude Include="src\Vector3.hpp" />
+    <ClInclude Include="src\Vector2.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,19 +3,21 @@
 #include "src/types.hpp"
 #include "src/defines.hpp"
 #include "src/ppm.hpp"
+#include "src/Size.hpp"
 
 int main()
 {
-	const int X = WIDTH;
-	const int Y = HEIGHT;
-	auto image = new RGB[Y][X];
+	const uint X = WIDTH;
+	const uint Y = HEIGHT;
+	Size size = Size(X, Y);
+	RGB* image = new RGB[X * Y];
 
-	for (unsigned int y = 0; y < Y; y++)
-		for (unsigned int x = 0; x < X; x++) {
+	for (uint y = 0; y < Y; y++)
+		for (uint x = 0; x < X; x++) {
 			RGB t = RGB(128, 128, 128);
-			image[y][x] = t;
+			image[y * Y + x] = t;
 		}
 
-	exportPPMbin(*image, v3(X, Y, 0));
+	exportPPMbin(image, size);
     return 0;
 }

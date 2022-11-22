@@ -2,11 +2,6 @@
 
 #include <math.h>
 
-v3 v3init(double x, double y, double z)
-{
-	return v3(x, y, z);
-}
-
 v3 v3add(v3 a, v3 b)
 {
 	return v3(

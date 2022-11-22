@@ -25,57 +25,90 @@
     <Filter Include="Pliki nagłówkowe\macros">
       <UniqueIdentifier>{be08dec5-29c6-4fc2-a57d-b40aba5d9912}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\domain">
+      <UniqueIdentifier>{6c2f50c1-482a-4571-88c2-88c74e810931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\objects\abstract">
+      <UniqueIdentifier>{fd63d03f-47b6-41e4-bbaa-54d31e9ebc9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\objects\shapes">
+      <UniqueIdentifier>{a39a0521-e59e-4bd9-8a00-0ac68ca7d6cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\domain">
+      <UniqueIdentifier>{dc0b4ae9-1e54-4958-8a0f-741101d9a1d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\domain\cameras">
+      <UniqueIdentifier>{34340016-5833-42d6-882f-309bda1a6d28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple CPP Ray Tracer.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="vector\Vector3.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="color\Color.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="exporter\ppm.cpp">
+    <ClCompile Include="src\ppm.cpp">
       <Filter>Pliki źródłowe\export</Filter>
     </ClCompile>
-    <ClCompile Include="Ray.cpp">
-      <Filter>Pliki źródłowe</Filter>
+    <ClCompile Include="src\Ray.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RGB.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Size.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
+    <ClCompile Include="src\orthographicCamera.cpp">
+      <Filter>Pliki źródłowe\domain\cameras</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vector\Vector3.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="color\Color.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="exporter\ppm.hpp">
+    <ClInclude Include="src\ppm.hpp">
       <Filter>Pliki nagłówkowe\export</Filter>
     </ClInclude>
-    <ClInclude Include="Object.hpp">
-      <Filter>Pliki nagłówkowe\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Camera.hpp">
-      <Filter>Pliki nagłówkowe\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="OrthographicCamera.hpp">
-      <Filter>Pliki nagłówkowe\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="GeometricObject.hpp">
-      <Filter>Pliki nagłówkowe\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.hpp">
-      <Filter>Pliki nagłówkowe\objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Ray.hpp">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="types.hpp">
+    <ClInclude Include="src\defines.hpp">
       <Filter>Pliki nagłówkowe\macros</Filter>
     </ClInclude>
-    <ClInclude Include="defines.hpp">
+    <ClInclude Include="src\types.hpp">
       <Filter>Pliki nagłówkowe\macros</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CameraInfo.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ray.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RGB.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Size.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector2.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GeometricObject.hpp">
+      <Filter>Pliki nagłówkowe\objects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Object.hpp">
+      <Filter>Pliki nagłówkowe\objects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RotateableObject.hpp">
+      <Filter>Pliki nagłówkowe\objects\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Sphere.hpp">
+      <Filter>Pliki nagłówkowe\objects\shapes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

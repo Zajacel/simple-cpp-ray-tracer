@@ -1,7 +1,7 @@
 #pragma once
 
 #include "RGB.hpp"
-#include "Vector3.hpp"
+#include "Size.hpp"
 
-void exportPPMtxt(RGB* data, v3 size);
-void exportPPMbin(RGB* data, v3 size);
+void exportPPMtxt(RGB* data, Size size);
+void exportPPMbin(RGB* data, Size size);
