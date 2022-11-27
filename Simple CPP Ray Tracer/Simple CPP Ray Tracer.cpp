@@ -20,5 +20,5 @@ int main()
 
 	//exportPPMbin(image, size);
 	exportBMP(image, size);
-    return 0;
+	return 0;
 }

@@ -9,8 +9,10 @@ struct Vector3 {
 typedef Vector3 v3;
 
 v3 v3add(v3 a, v3 b);
+v3 v3add(v3 a, double b);
 
 v3 v3sub(v3 a, v3 b);
+v3 v3sub(v3 a, double b);
 
 v3 v3mul(v3 a, double b);
 

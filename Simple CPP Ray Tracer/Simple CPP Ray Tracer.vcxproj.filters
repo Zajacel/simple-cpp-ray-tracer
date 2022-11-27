@@ -69,6 +69,9 @@
     <ClCompile Include="src\bmp.cpp">
       <Filter>Pliki źródłowe\export</Filter>
     </ClCompile>
+    <ClCompile Include="src\rotation.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ppm.hpp">
@@ -115,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="src\bmp.hpp">
       <Filter>Pliki nagłówkowe\export</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rotation.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
