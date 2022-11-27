@@ -8,5 +8,5 @@
 #define HEIGHT 128;
 
 // Clipping values
-#define EPSILON = 0.0000001
-#define HUGE = DBL_MAX
+#define EPSILON 0.0000001
+#define HUGE DBL_MAX
