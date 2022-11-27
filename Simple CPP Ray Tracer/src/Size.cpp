@@ -1,5 +1,11 @@
 #include "Size.hpp"
 
+Size::Size()
+{
+	this->width = 0;
+	this->height = 0;
+}
+
 Size::Size(uint w, uint h)
 {
 	this->width = w;

@@ -140,6 +140,7 @@
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\orthographicCamera.hpp" />
     <ClInclude Include="src\rotation.hpp" />
     <ClInclude Include="src\bmp.hpp" />
     <ClInclude Include="src\RotateableObject.hpp" />

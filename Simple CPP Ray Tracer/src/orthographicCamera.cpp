@@ -1,7 +1,6 @@
-#include "types.hpp"
+#include "orthographicCamera.hpp"
+
 #include "defines.hpp"
-#include "RGB.hpp"
-#include "CameraInfo.hpp"
 #include "rotation.hpp"
 
 RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
@@ -15,7 +14,7 @@ RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
 	origin.Y = calculateRotationY(origin, caminf.rot);
 	origin.Z = calculateRotationZ(origin, caminf.rot);
 
-	destination = v3add(origin, EPSILON);
+	destination = v3add(origin, EPSILON*100);
 
 	return RGB(0, 0, 0);
 }

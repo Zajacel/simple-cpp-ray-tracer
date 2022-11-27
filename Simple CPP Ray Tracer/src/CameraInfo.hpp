@@ -5,7 +5,7 @@
 #include "Size.hpp"
 #include "Scene.hpp"
 
-struct CameraInfo : RotateableObject {
+struct CameraInfo : public RotateableObject {
 	Vector2 size;
 	Size resolution;
 	Scene scene;

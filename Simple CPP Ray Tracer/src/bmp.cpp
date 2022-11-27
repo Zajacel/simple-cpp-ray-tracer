@@ -2,7 +2,7 @@
 
 char* generateBMPHeaders(Size size)
 {
-	char *bmp_headers = new char[54];
+	char *bmp_headers = new char[BMP_ALL_HEADERS_BYTES];
 	int fileSize = size.height * size.width * 3 + BMP_ALL_HEADERS_BYTES;
 
 	memcpy(bmp_headers, &BMP_HEADER, sizeof BMP_HEADER);
