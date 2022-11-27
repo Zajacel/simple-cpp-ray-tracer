@@ -11,12 +11,30 @@ v3 v3add(v3 a, v3 b)
 	);
 }
 
+v3 v3add(v3 a, double b)
+{
+	return v3(
+		a.X + b,
+		a.Y + b,
+		a.Z + b
+	);
+}
+
 v3 v3sub(v3 a, v3 b)
 {
 	return v3(
 		a.X - b.X,
 		a.Y - b.Y,
 		a.Z - b.Z
+	);
+}
+
+v3 v3sub(v3 a, double b)
+{
+	return v3(
+		a.X - b,
+		a.Y - b,
+		a.Z - b
 	);
 }
 

@@ -8,7 +8,7 @@
 
 #define BMP_CORE_HEADER_BYTES 14
 #define BMP_DIB_HEADER_BYTES 40
-#define BMP_ALL_HEADERS_BYTES 54
+#define BMP_ALL_HEADERS_BYTES BMP_CORE_HEADER_BYTES + BMP_DIB_HEADER_BYTES
 
 #pragma pack(push, 1)
 struct BMPheader {

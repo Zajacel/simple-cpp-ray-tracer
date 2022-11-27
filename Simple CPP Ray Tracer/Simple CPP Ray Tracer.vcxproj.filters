@@ -40,6 +40,9 @@
     <Filter Include="Pliki źródłowe\domain\cameras">
       <UniqueIdentifier>{34340016-5833-42d6-882f-309bda1a6d28}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\domain\cameras">
+      <UniqueIdentifier>{20855d98-3f13-43fb-8cd3-b883f08cd277}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple CPP Ray Tracer.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="src\bmp.cpp">
       <Filter>Pliki źródłowe\export</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rotation.cpp">
+      <Filter>Pliki źródłowe\domain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="src\bmp.hpp">
       <Filter>Pliki nagłówkowe\export</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rotation.hpp">
+      <Filter>Pliki nagłówkowe\domain</Filter>
+    </ClInclude>
+    <ClInclude Include="src\orthographicCamera.hpp">
+      <Filter>Pliki nagłówkowe\domain\cameras</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

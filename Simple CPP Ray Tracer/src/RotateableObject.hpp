@@ -2,6 +2,6 @@
 
 #include "Object.hpp"
 
-struct RotateableObject : Object {
+struct RotateableObject : public Object {
 	Vector3 rot;
 };

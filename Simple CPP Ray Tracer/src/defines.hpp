@@ -9,4 +9,4 @@
 
 // Clipping values
 #define EPSILON 0.0000001
-#define HUGE DBL_MAX
+//#define HUGE DBL_MAX
