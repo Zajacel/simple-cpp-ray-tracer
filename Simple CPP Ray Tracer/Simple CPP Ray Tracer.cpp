@@ -2,7 +2,7 @@
 
 #include "src/types.hpp"
 #include "src/defines.hpp"
-#include "src/ppm.hpp"
+#include "src/bmp.hpp"
 #include "src/Size.hpp"
 
 int main()
@@ -14,10 +14,11 @@ int main()
 
 	for (uint y = 0; y < Y; y++)
 		for (uint x = 0; x < X; x++) {
-			RGB t = RGB(128, 128, 128);
+			RGB t = RGB(255, 0, 0);
 			image[y * Y + x] = t;
 		}
 
-	exportPPMbin(image, size);
+	//exportPPMbin(image, size);
+	exportBMP(image, size);
     return 0;
 }

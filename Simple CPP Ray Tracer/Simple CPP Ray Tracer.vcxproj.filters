@@ -66,6 +66,9 @@
     <ClCompile Include="src\orthographicCamera.cpp">
       <Filter>Pliki źródłowe\domain\cameras</Filter>
     </ClCompile>
+    <ClCompile Include="src\bmp.cpp">
+      <Filter>Pliki źródłowe\export</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ppm.hpp">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="src\Sphere.hpp">
       <Filter>Pliki nagłówkowe\objects\shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bmp.hpp">
+      <Filter>Pliki nagłówkowe\export</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
