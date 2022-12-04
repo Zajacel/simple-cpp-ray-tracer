@@ -26,3 +26,11 @@ double calculateRotationZ(Vector3 p, Vector3 r) {
 		- p.Y * sin(r.X) * cos(r.Y)
 		+ p.X * sin(r.Y);
 }
+
+Vector3 calculateRotation(Vector3 p, Vector3 r) {
+	return Vector3(
+		calculateRotationX(p, r),
+		calculateRotationY(p, r),
+		calculateRotationZ(p, r)
+	);
+}

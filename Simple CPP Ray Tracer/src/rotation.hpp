@@ -5,3 +5,4 @@
 double calculateRotationX(Vector3 p, Vector3 r);
 double calculateRotationY(Vector3 p, Vector3 r);
 double calculateRotationZ(Vector3 p, Vector3 r);
+Vector3 calculateRotation(Vector3 p, Vector3 r);

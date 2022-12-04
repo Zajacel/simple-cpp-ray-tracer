@@ -4,17 +4,21 @@
 #include "rotation.hpp"
 
 RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
-	Vector3 origin, destination;
+	Vector3 origin, temp, destination;
 	
-	origin.X = (2 * caminf.pos.X - caminf.size.X + 2 * x * caminf.resolution.width) / 2;
-	origin.Y = (2 * caminf.pos.Y - caminf.size.Y + 2 * y * caminf.resolution.width) / 2;
-	origin.Z = caminf.pos.Z;
+	auto cellHalfWidth = caminf.size.X / caminf.resolution.width;
+	auto cellHalfHeight = caminf.size.Y / caminf.resolution.height;
 
-	origin.X = calculateRotationX(origin, caminf.rot);
-	origin.Y = calculateRotationY(origin, caminf.rot);
-	origin.Z = calculateRotationZ(origin, caminf.rot);
+	temp.X = cellHalfWidth/2 + caminf.pos.X - caminf.size.X / 2 + x * cellHalfWidth;
+	temp.Y = cellHalfHeight/2 + caminf.pos.Y - caminf.size.Y / 2 + y * cellHalfHeight;
+	temp.Z = caminf.pos.Z;
 
-	destination = v3add(origin, EPSILON*100);
+
+	destination = v3add(temp, v3(0, 0, RT_EPSILON));
+	origin = calculateRotation(temp, caminf.rot);
+	temp = destination;
+	destination = calculateRotation(temp, caminf.rot);
+	
 
 	return RGB(0, 0, 0);
 }

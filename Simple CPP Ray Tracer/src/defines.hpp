@@ -4,9 +4,9 @@
 
 // Image dimensions
 // For nom used for dev purposes
-#define WIDTH 128;
-#define HEIGHT 128;
+#define WIDTH 128
+#define HEIGHT 128
 
 // Clipping values
-#define EPSILON 0.0000001
-//#define HUGE DBL_MAX
+#define RT_EPSILON 0.0000001
+#define RT_HUGE DBL_MAX

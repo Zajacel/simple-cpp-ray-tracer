@@ -8,24 +8,23 @@
 
 int main()
 {
-	const uint X = WIDTH;
-	const uint Y = HEIGHT;
-	Size size = Size(X, Y);
-	RGB* image = new RGB[X * Y];
+	Size res = Size(WIDTH, HEIGHT);
+	RGB* image = new RGB[WIDTH * HEIGHT];
 
 	Scene scene;
 
 	CameraInfo caminf;
-	caminf.resolution = size;
+	caminf.resolution = res;
 	caminf.scene = scene;
-	caminf.pos = Vector3(-1, 1, -5);
+	caminf.pos = Vector3(0, 0, 0);
+	caminf.rot = Vector3(0, 0, 0);
+	caminf.size = Vector2(100, 100);
 
-
-	for (uint y = 0; y < Y; y++)
-		for (uint x = 0; x < X; x++)
-			image[y * Y + x] = orthographicCamera(caminf, x, y);
-
+	for (uint y = 0; y < HEIGHT; y++)
+		for (uint x = 0; x < WIDTH; x++) {
+			image[y * HEIGHT + x] = orthographicCamera(caminf, x, y);
+		}
 	//exportPPMbin(image, size);
-	exportBMP(image, size);
+	exportBMP(image, res);
 	return 0;
 }
