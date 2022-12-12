@@ -21,9 +21,9 @@ int main()
 	caminf.size = Vector2(100, 100);
 
 	for (uint y = 0; y < HEIGHT; y++)
-		for (uint x = 0; x < WIDTH; x++) {
+		for (uint x = 0; x < WIDTH; x++)
 			image[y * HEIGHT + x] = orthographicCamera(caminf, x, y);
-		}
+
 	//exportPPMbin(image, size);
 	exportBMP(image, res);
 	return 0;
