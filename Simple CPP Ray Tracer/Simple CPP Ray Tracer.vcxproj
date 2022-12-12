@@ -135,7 +135,9 @@
     <ClCompile Include="src\ppm.cpp" />
     <ClCompile Include="src\Ray.cpp" />
     <ClCompile Include="Simple CPP Ray Tracer.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
     <ClCompile Include="src\Size.cpp" />
+    <ClCompile Include="src\Sphere.cpp" />
     <ClCompile Include="src\Vector3.cpp" />
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>

@@ -8,5 +8,7 @@
 #define HEIGHT 128
 
 // Clipping values
-#define RT_EPSILON 0.0000001
+#define RT_EPSILON 0.0001
 #define RT_HUGE DBL_MAX
+
+#define MAX_OBJECTS 1023

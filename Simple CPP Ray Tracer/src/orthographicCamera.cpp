@@ -3,13 +3,22 @@
 #include "defines.hpp"
 #include "rotation.hpp"
 #include <stdio.h>
+#include <stdlib.h>
 
 RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
 	Vector3 origin, destination;
 
 	computeOriginAndDestination(&origin, &destination, caminf, x, y);
 
-	return RGB(0, 0, 0);
+	/*printf_s("%f,%f,%f,%f,%f,%f\n",
+		origin.X, origin.Y, origin.Z,
+		destination.X, destination.Y, destination.Z
+	);*/
+
+	auto hittedObjectIndex = findClosestColision(&origin, &destination, caminf);
+	if (hittedObjectIndex == -1) return caminf.skyboxColor;
+	return caminf.scene.objects[hittedObjectIndex]->color;
+	
 }
 
 void computeOriginAndDestination(v3 *origin, v3 *destination, CameraInfo caminf, uint x, uint y) {
@@ -34,4 +43,21 @@ void computeVectorRotation(v3* origin, v3* destination, v3* temp, CameraInfo cam
 	*origin = calculateRotation(*temp, caminf.rot);
 	*temp = *destination;
 	*destination = calculateRotation(*temp, caminf.rot);
+}
+
+int findClosestColision(v3 *origin, v3 *destination, CameraInfo caminf) {
+	double smallestDistance = -1;
+	int closestObjectIndex;
+
+	for (int i = 0; i < caminf.scene.currentObjectIndex; i++) {
+		auto t = caminf.scene.objects[i];
+		auto distance = t->HitTest(*origin, *destination);
+
+		if (smallestDistance == -1 || distance < smallestDistance) {
+			smallestDistance = distance;
+			closestObjectIndex = i;
+		}
+	}
+
+	return smallestDistance == -1 ? -1 : closestObjectIndex;
 }

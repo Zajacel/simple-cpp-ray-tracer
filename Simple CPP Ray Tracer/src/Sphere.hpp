@@ -3,7 +3,9 @@
 #include "GeometricObject.hpp"
 #include "RGB.hpp"
 
-struct Spgere : GeometricObject {
+struct Sphere : public GeometricObject {
 	double radius;
-	RGB color;
+
+	Sphere(Vector3 pos, double r, RGB c);
+	double HitTest(Vector3 origin, Vector3 destination);
 };
