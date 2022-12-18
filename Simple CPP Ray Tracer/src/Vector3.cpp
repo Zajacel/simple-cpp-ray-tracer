@@ -75,6 +75,11 @@ double v3len(v3 a)
 	return sqrt(a.X * a.X + a.Y * a.Y + a.Z * a.Z);
 }
 
+double v3lenSq(v3 a)
+{
+	return a.X * a.X + a.Y * a.Y + a.Z * a.Z;
+}
+
 v3 v3norm(v3 a)
 {
 	return v3div(a, v3len(a));

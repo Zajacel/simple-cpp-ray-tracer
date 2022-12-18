@@ -10,15 +10,9 @@ RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
 
 	computeOriginAndDestination(&origin, &destination, caminf, x, y);
 
-	/*printf_s("%f,%f,%f,%f,%f,%f\n",
-		origin.X, origin.Y, origin.Z,
-		destination.X, destination.Y, destination.Z
-	);*/
-
 	auto hittedObjectIndex = findClosestColision(&origin, &destination, caminf);
 	if (hittedObjectIndex == -1) return caminf.skyboxColor;
 	return caminf.scene.objects[hittedObjectIndex]->color;
-	
 }
 
 void computeOriginAndDestination(v3 *origin, v3 *destination, CameraInfo caminf, uint x, uint y) {
@@ -59,5 +53,5 @@ int findClosestColision(v3 *origin, v3 *destination, CameraInfo caminf) {
 		}
 	}
 
-	return smallestDistance == -1 ? -1 : closestObjectIndex;
+	return smallestDistance < 0 ? -1 : closestObjectIndex;
 }

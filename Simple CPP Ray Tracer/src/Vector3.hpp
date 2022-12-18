@@ -24,4 +24,6 @@ double v3dot(v3 a, v3 b);
 
 double v3len(v3 a);
 
+double v3lenSq(v3 a);
+
 v3 v3norm(v3 a);

@@ -1,6 +1,7 @@
 #include "Sphere.hpp"
 
 #include <math.h>
+#include <stdio.h>
 
 Sphere::Sphere(Vector3 center, double r, RGB c)
 {
@@ -11,12 +12,14 @@ Sphere::Sphere(Vector3 center, double r, RGB c)
 
 double Sphere::HitTest(Vector3 origin, Vector3 destination)
 {
-	v3 t = v3sub(origin, pos);
+	v3 x = v3sub(origin, this->pos);
 	double
-		a = v3dot(destination, destination),
-		b = 2 * v3dot(destination, t),
-		c = v3dot(t, t) - radius * radius,
+		a = v3lenSq(destination),
+		b = v3dot(v3mul(x, 2), destination),
+		c = v3lenSq(x) - radius * radius,
 		delta = b * b - 4 * a * c;
+
+	//printf("%f,%f,%f,%f\n", a, b, c, delta);
 
 	if (delta < 0) return -1;
 	else if (delta > 0) {
