@@ -70,9 +70,14 @@ double v3dot(v3 a, v3 b)
 	return a.X * b.X + a.Y * b.Y + a.Z * b.Z;
 }
 
+double v3lenSq(v3 a)
+{
+	return v3dot(a, a);
+}
+
 double v3len(v3 a)
 {
-	return sqrt(a.X * a.X + a.Y * a.Y + a.Z * a.Z);
+	return sqrt(v3lenSq(a));
 }
 
 v3 v3norm(v3 a)

@@ -3,29 +3,39 @@
 #include "src/types.hpp"
 #include "src/defines.hpp"
 #include "src/bmp.hpp"
+#include "src/ppm.hpp"
 #include "src/Size.hpp"
 #include "src/orthographicCamera.hpp"
+#include "src/Sphere.hpp"
 
 int main()
 {
-	const uint X = WIDTH;
-	const uint Y = HEIGHT;
-	Size size = Size(X, Y);
-	RGB* image = new RGB[X * Y];
+	Size res = Size(WIDTH, HEIGHT);
+	RGB* image = new RGB[WIDTH * HEIGHT];
 
 	Scene scene;
+	scene.addObject(new Sphere(
+		v3(0, 0, 8),
+		2,
+		RGB(200, 30, 30)
+	));
 
 	CameraInfo caminf;
-	caminf.resolution = size;
+	caminf.resolution = res;
 	caminf.scene = scene;
-	caminf.pos = Vector3(-1, 1, -5);
+	caminf.pos = Vector3(0, 0, 0);
+	caminf.rot = Vector3(0, 0, 0);
+	caminf.size = Vector2(10, 10);
+	caminf.skyboxColor = RGB(47, 159, 245);
 
+	for (uint y = 0; y < HEIGHT; y++)
+		for (uint x = 0; x < WIDTH; x++)
+			image[y * HEIGHT + x] = orthographicCamera(caminf, x, y);
 
-	for (uint y = 0; y < Y; y++)
-		for (uint x = 0; x < X; x++)
-			image[y * Y + x] = orthographicCamera(caminf, x, y);
+	exportBMP(image, res);
+	exportPPMbin(image, res);
+	exportPPMtxt(image, res);
 
-	//exportPPMbin(image, size);
-	exportBMP(image, size);
+	delete scene.objects, image;
 	return 0;
 }

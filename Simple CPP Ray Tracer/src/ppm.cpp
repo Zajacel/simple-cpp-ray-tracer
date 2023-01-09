@@ -10,7 +10,7 @@
 void exportPPMtxt(RGB *data, Size size)
 {
 	FILE* file;
-	fopen_s(&file, "image.bmp", "w");
+	fopen_s(&file, "image_txt.ppm", "w");
 
 	if (file == NULL)
 	{
@@ -25,12 +25,14 @@ void exportPPMtxt(RGB *data, Size size)
 			RGB t = data[y * size.height + x];
 			fprintf(file, "%d %d %d\n", t.R, t.G, t.B);
 		}
+
+	fclose(file);
 }
 
 void exportPPMbin(RGB* data, Size size)
 {
 	FILE* file;
-	fopen_s(&file, "image.bmp", "w");
+	fopen_s(&file, "image_bin.ppm", "w");
 
 	if (file == NULL)
 	{
@@ -41,8 +43,10 @@ void exportPPMbin(RGB* data, Size size)
 	// File header, in order. Magic Number, width, height, max value
 	fprintf(file, "P%d\r%d %d\r%d\r", 6, size.width, size.height, 255);
 	for (uint y = 0; y < size.height; y++)
-		for (uint x = 0; x <= size.width; x++) {
+		for (uint x = 0; x < size.width; x++) {
 			RGB t = data[y * size.height + x];
 			fprintf(file, "%c%c%c", t.R, t.G, t.B);
 		}
+
+	fclose(file);
 }
