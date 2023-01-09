@@ -3,6 +3,7 @@
 #include "src/types.hpp"
 #include "src/defines.hpp"
 #include "src/bmp.hpp"
+#include "src/ppm.hpp"
 #include "src/Size.hpp"
 #include "src/orthographicCamera.hpp"
 #include "src/Sphere.hpp"
@@ -13,17 +14,11 @@ int main()
 	RGB* image = new RGB[WIDTH * HEIGHT];
 
 	Scene scene;
-	//for (int i = 0; i <= 5; i++) {
-	//	auto p = Vector3(i, i, i);
-	//	auto c = RGB(i * 50, i * 50, i * 50);
-	//	scene.addObject(Sphere(p, i * 1.5, c));
-	//}
-	auto t = new Sphere(
-		v3(6, 0, 0),
+	scene.addObject(new Sphere(
+		v3(0, 0, 8),
 		2,
 		RGB(200, 30, 30)
-	);
-	scene.addObject(t);
+	));
 
 	CameraInfo caminf;
 	caminf.resolution = res;
@@ -37,8 +32,9 @@ int main()
 		for (uint x = 0; x < WIDTH; x++)
 			image[y * HEIGHT + x] = orthographicCamera(caminf, x, y);
 
-	//exportPPMbin(image, size);
 	exportBMP(image, res);
+	exportPPMbin(image, res);
+	exportPPMtxt(image, res);
 
 	delete scene.objects, image;
 	return 0;

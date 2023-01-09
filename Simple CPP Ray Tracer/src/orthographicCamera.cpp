@@ -8,14 +8,14 @@
 RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
 	Vector3 origin, direction;
 
-	computeOriginAndDestination(&origin, &direction, caminf, x, y);
+	computeOriginAndDirection(&origin, &direction, caminf, x, y);
 
 	auto hittedObjectIndex = findClosestColision(&origin, &direction, caminf);
 	if (hittedObjectIndex == -1) return caminf.skyboxColor;
 	return caminf.scene.objects[hittedObjectIndex]->color;
 }
 
-void computeOriginAndDestination(v3 *origin, v3 *direction, CameraInfo caminf, uint x, uint y) {
+void computeOriginAndDirection(v3 *origin, v3 *direction, CameraInfo caminf, uint x, uint y) {
 	Vector3 temp;
 
 	computePointPosition(&temp, caminf, x, y);
