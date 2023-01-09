@@ -12,3 +12,4 @@
 #define RT_HUGE DBL_MAX
 
 #define MAX_OBJECTS 1023
+#define MAX_LIGHTS 1023

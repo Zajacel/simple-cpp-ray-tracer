@@ -142,6 +142,10 @@
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\PerfectDiffuseMaterial.hpp" />
+    <ClInclude Include="src\Material.hpp" />
+    <ClInclude Include="src\Light.hpp" />
+    <ClInclude Include="src\PointLight.hpp" />
     <ClInclude Include="src\orthographicCamera.hpp" />
     <ClInclude Include="src\rotation.hpp" />
     <ClInclude Include="src\bmp.hpp" />
