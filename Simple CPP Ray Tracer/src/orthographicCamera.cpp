@@ -6,20 +6,20 @@
 #include <stdlib.h>
 
 RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
-	Vector3 origin, destination;
+	Vector3 origin, direction;
 
-	computeOriginAndDestination(&origin, &destination, caminf, x, y);
+	computeOriginAndDestination(&origin, &direction, caminf, x, y);
 
-	auto hittedObjectIndex = findClosestColision(&origin, &destination, caminf);
+	auto hittedObjectIndex = findClosestColision(&origin, &direction, caminf);
 	if (hittedObjectIndex == -1) return caminf.skyboxColor;
 	return caminf.scene.objects[hittedObjectIndex]->color;
 }
 
-void computeOriginAndDestination(v3 *origin, v3 *destination, CameraInfo caminf, uint x, uint y) {
+void computeOriginAndDestination(v3 *origin, v3 *direction, CameraInfo caminf, uint x, uint y) {
 	Vector3 temp;
 
 	computePointPosition(&temp, caminf, x, y);
-	computeVectorRotation(origin, destination, &temp, caminf);
+	computeVectorRotation(origin, direction, &temp, caminf);
 }
 
 void computePointPosition(v3* point, CameraInfo caminf, uint x, uint y) {
@@ -32,26 +32,26 @@ void computePointPosition(v3* point, CameraInfo caminf, uint x, uint y) {
 	point->Z = caminf.pos.Z;
 }
 
-void computeVectorRotation(v3* origin, v3* destination, v3* temp, CameraInfo caminf) {
-	*destination = v3add(*temp, v3(0, 0, RT_EPSILON));
+void computeVectorRotation(v3* origin, v3* direction, v3* temp, CameraInfo caminf) {
+	*direction = v3(0, 0, 1);
 	*origin = calculateRotation(*temp, caminf.rot);
-	*temp = *destination;
-	*destination = calculateRotation(*temp, caminf.rot);
+	*direction = v3norm(calculateRotation(*direction, caminf.rot));
+	*origin = *temp;
 }
 
-int findClosestColision(v3 *origin, v3 *destination, CameraInfo caminf) {
-	double smallestDistance = -1;
-	int closestObjectIndex;
+int findClosestColision(v3 *origin, v3 *direction, CameraInfo caminf) {
+	double smallestDistance = RT_HUGE;
+	int closestObjectIndex = -1;
 
 	for (int i = 0; i < caminf.scene.currentObjectIndex; i++) {
 		auto t = caminf.scene.objects[i];
-		auto distance = t->HitTest(*origin, *destination);
+		auto distance = t->HitTest(*origin, *direction);
 
-		if (smallestDistance == -1 || distance < smallestDistance) {
+		if (distance > 0 && distance < smallestDistance) {
 			smallestDistance = distance;
 			closestObjectIndex = i;
 		}
 	}
 
-	return smallestDistance < 0 ? -1 : closestObjectIndex;
+	return smallestDistance >= RT_HUGE ? -1 : closestObjectIndex;
 }

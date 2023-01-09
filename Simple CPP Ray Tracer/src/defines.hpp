@@ -4,8 +4,8 @@
 
 // Image dimensions
 // For nom used for dev purposes
-#define WIDTH 128
-#define HEIGHT 128
+#define WIDTH 512
+#define HEIGHT 512
 
 // Clipping values
 #define RT_EPSILON 0.0001

@@ -32,7 +32,7 @@ void exportBMP(RGB* data, Size size)
 	fwrite(bmp_headers, BMP_ALL_HEADERS_BYTES, 1, file);
 
 	for (uint y = 0; y < size.height; y++)
-		for (uint x = 0; x <= size.width; x++) {
+		for (uint x = 0; x < size.width; x++) {
 			RGB t = data[y * (int)size.height + x];
 			fprintf(file, "%c%c%c", t.B, t.G, t.R);
 		}
