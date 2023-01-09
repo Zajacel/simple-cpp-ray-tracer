@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include "defines.hpp"
 
-Sphere::Sphere(Vector3 center, double r, RGB c)
+Sphere::Sphere(Vector3 center, double r, Material* mat)
 {
 	this->pos = center;
 	this->radius = r;
-	this->color = c;
+	this->material = mat;
 }
 
 double Sphere::HitTest(Vector3 origin, Vector3 destination)

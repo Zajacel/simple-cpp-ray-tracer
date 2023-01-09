@@ -6,6 +6,6 @@
 struct Sphere : public GeometricObject {
 	double radius;
 
-	Sphere(Vector3 pos, double r, RGB c);
+	Sphere(Vector3 pos, double r, Material* mat);
 	double HitTest(Vector3 origin, Vector3 destination);
 };

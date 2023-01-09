@@ -12,7 +12,7 @@ RGB orthographicCamera(CameraInfo caminf, uint x, uint y) {
 
 	auto hittedObjectIndex = findClosestColision(&origin, &direction, caminf);
 	if (hittedObjectIndex == -1) return caminf.skyboxColor;
-	return caminf.scene.objects[hittedObjectIndex]->color;
+	return computeMaterial(hittedObjectIndex, caminf.scene);
 }
 
 void computeOriginAndDirection(v3 *origin, v3 *direction, CameraInfo caminf, uint x, uint y) {
@@ -54,4 +54,12 @@ int findClosestColision(v3 *origin, v3 *direction, CameraInfo caminf) {
 	}
 
 	return smallestDistance >= RT_HUGE ? -1 : closestObjectIndex;
+}
+
+RGB computeMaterial(int index, Scene scene)
+{
+	for (int i = 0; i < scene.currentLightIndex; i++) {
+		auto t = scene.lights[i];
+	}
+	return RGB(0, 0, 0);
 }

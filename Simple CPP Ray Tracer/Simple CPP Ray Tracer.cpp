@@ -14,11 +14,11 @@ int main()
 	RGB* image = new RGB[WIDTH * HEIGHT];
 
 	Scene scene;
-	scene.addObject(new Sphere(
+	/*scene.addObject(new Sphere(
 		v3(0, 0, 8),
 		2,
-		RGB(200, 30, 30)
-	));
+		NULL
+	));*/
 
 	CameraInfo caminf;
 	caminf.resolution = res;
