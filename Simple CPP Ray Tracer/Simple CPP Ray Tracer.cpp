@@ -20,6 +20,18 @@ int main()
 		RGB(200, 30, 30)
 	));
 
+	scene.addObject(new Sphere(
+		v3(-1.75, 0, 11),
+		2,
+		RGB(30, 200, 30)
+	));
+
+	scene.addObject(new Sphere(
+		v3(1.75, 0, 5),
+		2,
+		RGB(30, 30, 200)
+	));
+
 	CameraInfo caminf;
 	caminf.resolution = res;
 	caminf.scene = scene;
