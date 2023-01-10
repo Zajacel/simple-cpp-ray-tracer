@@ -43,6 +43,12 @@
     <Filter Include="Pliki nagłówkowe\domain\cameras">
       <UniqueIdentifier>{20855d98-3f13-43fb-8cd3-b883f08cd277}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\domain\colors">
+      <UniqueIdentifier>{5b445dc8-3625-43df-b829-e0438121dbf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\math">
+      <UniqueIdentifier>{7853efab-81f5-45cb-a272-f07d377604b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple CPP Ray Tracer.cpp">
@@ -81,6 +87,12 @@
     <ClCompile Include="src\Sphere.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="src\RangeRGB.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clamp.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ppm.hpp">
@@ -98,19 +110,10 @@
     <ClInclude Include="src\Ray.hpp">
       <Filter>Pliki nagłówkowe\domain</Filter>
     </ClInclude>
-    <ClInclude Include="src\RGB.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
     <ClInclude Include="src\Scene.hpp">
       <Filter>Pliki nagłówkowe\domain</Filter>
     </ClInclude>
     <ClInclude Include="src\Size.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vector2.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vector3.hpp">
       <Filter>Pliki nagłówkowe\domain</Filter>
     </ClInclude>
     <ClInclude Include="src\GeometricObject.hpp">
@@ -128,11 +131,38 @@
     <ClInclude Include="src\bmp.hpp">
       <Filter>Pliki nagłówkowe\export</Filter>
     </ClInclude>
-    <ClInclude Include="src\rotation.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
     <ClInclude Include="src\orthographicCamera.hpp">
       <Filter>Pliki nagłówkowe\domain\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PerfectDiffuseMaterial.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Material.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Light.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PointLight.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RGB.hpp">
+      <Filter>Pliki nagłówkowe\domain\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RangeRGB.hpp">
+      <Filter>Pliki nagłówkowe\domain\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector2.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rotation.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\clamp.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

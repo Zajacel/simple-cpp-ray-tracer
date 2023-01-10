@@ -128,6 +128,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\clamp.cpp" />
+    <ClCompile Include="src\RangeRGB.cpp" />
     <ClCompile Include="src\rotation.cpp" />
     <ClCompile Include="src\bmp.cpp" />
     <ClCompile Include="src\orthographicCamera.cpp" />
@@ -142,6 +144,8 @@
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\RangeRGB.hpp" />
+    <ClInclude Include="src\clamp.hpp" />
     <ClInclude Include="src\PerfectDiffuseMaterial.hpp" />
     <ClInclude Include="src\Material.hpp" />
     <ClInclude Include="src\Light.hpp" />
