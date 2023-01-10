@@ -6,6 +6,7 @@
 #include "src/ppm.hpp"
 #include "src/Size.hpp"
 #include "src/orthographicCamera.hpp"
+#include "src/pinholeCamera.hpp"
 #include "src/Sphere.hpp"
 
 int main()

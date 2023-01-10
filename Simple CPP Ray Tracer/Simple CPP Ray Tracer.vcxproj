@@ -128,6 +128,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\pinholeCamera.cpp" />
+    <ClCompile Include="src\cameraUtils.cpp" />
+    <ClCompile Include="src\OrthonormalBasis.cpp" />
     <ClCompile Include="src\rotation.cpp" />
     <ClCompile Include="src\bmp.cpp" />
     <ClCompile Include="src\orthographicCamera.cpp" />
@@ -142,6 +145,9 @@
     <ClCompile Include="src\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\pinholeCamera.hpp" />
+    <ClInclude Include="src\cameraUtils.hpp" />
+    <ClInclude Include="src\OrthonormalBasis.hpp" />
     <ClInclude Include="src\orthographicCamera.hpp" />
     <ClInclude Include="src\rotation.hpp" />
     <ClInclude Include="src\bmp.hpp" />
