@@ -41,13 +41,16 @@ int main()
 	caminf.skyboxColor = RGB(47, 159, 245);
 
 	for (uint y = 0; y < HEIGHT; y++)
-		for (uint x = 0; x < WIDTH; x++)
-			image[y * HEIGHT + x] = orthographicCamera(caminf, x, y);
+		for (uint x = 0; x < WIDTH; x++) {
+			image[y * WIDTH + x] = orthographicCamera(caminf, x, y);
+		}
+			
 
 	exportBMP(image, res);
 	exportPPMbin(image, res);
 	exportPPMtxt(image, res);
 
-	delete scene.objects, image;
+	delete scene.objects, caminf;
+	delete[] image;
 	return 0;
 }

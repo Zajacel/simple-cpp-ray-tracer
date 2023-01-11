@@ -44,8 +44,8 @@ int findClosestColision(v3 *origin, v3 *direction, CameraInfo caminf) {
 	int closestObjectIndex = -1;
 
 	for (int i = 0; i < caminf.scene.currentObjectIndex; i++) {
-		auto t = caminf.scene.objects[i];
-		auto distance = t->HitTest(*origin, *direction);
+		GeometricObject* t = caminf.scene.objects[i];
+		double distance = t->HitTest(*origin, *direction);
 
 		if (distance > 0 && distance < smallestDistance) {
 			smallestDistance = distance;
