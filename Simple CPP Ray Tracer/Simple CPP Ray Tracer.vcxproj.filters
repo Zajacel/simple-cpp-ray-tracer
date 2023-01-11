@@ -43,6 +43,36 @@
     <Filter Include="Pliki nagłówkowe\domain\cameras">
       <UniqueIdentifier>{20855d98-3f13-43fb-8cd3-b883f08cd277}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\domain\cameras\abstract">
+      <UniqueIdentifier>{f8bca889-5e02-4082-b932-7ba60f2469db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\math">
+      <UniqueIdentifier>{d305f83f-ae55-4193-8902-64f2a068b171}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\domain\colors">
+      <UniqueIdentifier>{d53322b1-49f1-48ac-9a9e-ca6ef63d75a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\domain\world">
+      <UniqueIdentifier>{40e9cc83-1402-40b1-9955-e984fec9019b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\math">
+      <UniqueIdentifier>{cfd68b00-f9dd-4301-963f-d2ef769e2a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\domain\colors">
+      <UniqueIdentifier>{24affbd4-844c-497c-bb67-91f5f987328b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\domain\world">
+      <UniqueIdentifier>{8fb00cb0-44fa-40c1-9053-22f53ebbc4c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\objects">
+      <UniqueIdentifier>{344c055f-84d4-4398-8dae-a4b2df351350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\objects\shapes">
+      <UniqueIdentifier>{38955b19-0664-4f56-842f-891f54b80c7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\domain\cameras\abstract">
+      <UniqueIdentifier>{bb37b4c5-3c92-47b5-8967-8a48be188f84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Simple CPP Ray Tracer.cpp">
@@ -51,35 +81,35 @@
     <ClCompile Include="src\ppm.cpp">
       <Filter>Pliki źródłowe\export</Filter>
     </ClCompile>
-    <ClCompile Include="src\Ray.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
-    </ClCompile>
-    <ClCompile Include="src\RGB.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Size.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Vector2.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Vector3.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
-    </ClCompile>
     <ClCompile Include="src\orthographicCamera.cpp">
       <Filter>Pliki źródłowe\domain\cameras</Filter>
     </ClCompile>
     <ClCompile Include="src\bmp.cpp">
       <Filter>Pliki źródłowe\export</Filter>
     </ClCompile>
+    <ClCompile Include="src\Vector3.cpp">
+      <Filter>Pliki źródłowe\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2.cpp">
+      <Filter>Pliki źródłowe\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Size.cpp">
+      <Filter>Pliki źródłowe\math</Filter>
+    </ClCompile>
     <ClCompile Include="src\rotation.cpp">
-      <Filter>Pliki źródłowe\domain</Filter>
+      <Filter>Pliki źródłowe\math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RGB.cpp">
+      <Filter>Pliki źródłowe\domain\colors</Filter>
     </ClCompile>
     <ClCompile Include="src\Scene.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\domain\world</Filter>
     </ClCompile>
     <ClCompile Include="src\Sphere.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\objects\shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cameraUtils.cpp">
+      <Filter>Pliki źródłowe\domain\cameras\abstract</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,27 +121,6 @@
     </ClInclude>
     <ClInclude Include="src\types.hpp">
       <Filter>Pliki nagłówkowe\macros</Filter>
-    </ClInclude>
-    <ClInclude Include="src\CameraInfo.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Ray.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\RGB.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Scene.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Size.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vector2.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Vector3.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
     </ClInclude>
     <ClInclude Include="src\GeometricObject.hpp">
       <Filter>Pliki nagłówkowe\objects\abstract</Filter>
@@ -128,11 +137,32 @@
     <ClInclude Include="src\bmp.hpp">
       <Filter>Pliki nagłówkowe\export</Filter>
     </ClInclude>
-    <ClInclude Include="src\rotation.hpp">
-      <Filter>Pliki nagłówkowe\domain</Filter>
-    </ClInclude>
     <ClInclude Include="src\orthographicCamera.hpp">
       <Filter>Pliki nagłówkowe\domain\cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cameraUtils.hpp">
+      <Filter>Pliki nagłówkowe\domain\cameras\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CameraInfo.hpp">
+      <Filter>Pliki nagłówkowe\domain\cameras\abstract</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Size.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector3.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vector2.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RGB.hpp">
+      <Filter>Pliki nagłówkowe\domain\colors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rotation.hpp">
+      <Filter>Pliki nagłówkowe\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.hpp">
+      <Filter>Pliki nagłówkowe\domain\world</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
